@@ -1,0 +1,19 @@
+data:
+  name: opengf
+  num_classes: 2
+  num_features: 1 # 1 - Intensity, 5 - Intensity + Dimensionality
+  ignore_class: -1
+  root: "E:/OpenGF"
+  grid_size: 1.0
+  num_steps_per_epochs: 500 # 一个 epoch 包括多少 steps，决定了 dataset 的 len 属性
+  num_points_per_step: 50000
+  radius: -1.0 # 当半径大于 0 时，采用半径搜索
+  transform:
+    random_translate: 0.001
+    random_rotate_z: 15
+    random_scale_offset: 0.1
+    auto_color_contrast: False
+    random_drop_color: 0.0
+    append_height: True
+  ALS: False
+  HasIntensity: False

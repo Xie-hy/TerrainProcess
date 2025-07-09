@@ -1,0 +1,10 @@
+train:
+  num_epochs: 300
+  batch_size: 2
+  batch_size_val: 6
+  use_class_weights: True
+  num_workers: 1
+  lr: 0.01
+  devices: [ 0 ]
+  checkpoints: './outputs/ckpts'
+  loggers: './outputs/loggers'

@@ -1,0 +1,13 @@
+network:
+  name: randlanet
+  num_classes: ${data.num_classes}
+  num_features: ${data.num_features}
+  ignore_class: ${data.ignore_class}
+  append_height: ${data.transform.append_height}
+  grid_size: ${data.grid_size} # 设置为 ${data.grid_size} 或其他 大于0的数，采用半径搜索，否则用 KNN 索引
+  num_bottleneck: 8
+  k: 16
+  up_k: 3
+  decimations: [ 4, 4, 4, 4, 2 ]
+  ratio: [ 0.25, 0.25, 0.25, 0.25 ] # 降采样频率，sqrt(ratio) 确定的是 voxel 降采样倍率
+  sampler: 'fps'

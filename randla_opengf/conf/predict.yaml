@@ -1,0 +1,21 @@
+predict:
+  path: 'E:\OpenGF\predict\test.las'
+  save_path: 'E:\OpenGF\predict_ground'
+  vis: False
+  num_votes: 4
+  batch_size: 16
+  num_workers: 1
+  num_classes: 2
+  ignore_class: -1
+  devices: [ 0 ]
+  smooth: 0.95 # 0 不平滑， 0.99 更大的平滑
+  torchscript: 'E:\OpenGF\weight\randlanet-opengf.pt'
+  checkpoints: 'E:\randla_opengf\outputs\ckpts\randlanet-opengf\epoch=61-valid_miou=0.7795-valid_acc=0.9042.ckpt'
+  num_steps_per_epoch: 200
+  num_points_per_step: 50000
+  profile_sample: False
+  append_height: True
+  grid_size: 1.0
+  classify_delaunay: True
+  HasClassification: False
+

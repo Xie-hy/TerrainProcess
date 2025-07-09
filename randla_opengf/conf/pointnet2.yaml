@@ -1,0 +1,22 @@
+network:
+  name: pointnet2
+  num_classes: ${data.num_classes}
+  num_features: ${data.num_features}
+
+  ratios: [ 0.25, 0.25, 0.25, 0.25 ]
+  radius: [ 0.25, 0.5, 1.0, 2.0 ]
+  down_mlp_layers: [
+    [ 3, 16, 16, 32 ],
+    [ 32, 32, 32, 64 ],
+    [ 64, 64, 64, 128 ],
+    [ 128, 128, 128, 256 ]
+  ]
+  up_mlp_layers: [
+    [ 512, 256, 128 ],
+    [ 256, 128, 64 ],
+    [ 128, 64, 32 ],
+    [ 64, 32, 16 ]
+  ]
+  summit_layers: [ 256, 256 ]
+  up_k: [ 1, 1, 1, 1 ]
+  cls_mlp_layers: [ 16, 128 ]
