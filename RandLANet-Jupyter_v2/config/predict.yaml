@@ -1,0 +1,15 @@
+predict:
+  path: 'D:\Data\FEIMA_DATA\lidar30\1\merged.las'
+  save_path: 'D:\Data\FEIMA_DATA\lidar30\1\'
+  num_epoch: 10
+  batch_size: 20
+  step_size: 20
+  num_points_per_step: 10000
+  num_workers: 1
+  num_classes: 2
+  smooth: 0.95 # 0 不平滑， 0.99 更大的平滑
+  checkpoints: 'C:\Users\xhy\Desktop\RandLA-Net-pytorch-master\outputs\ckpts\2025-7-31\checkpoint_114_ACC_0.92_MIOU_0.77.pth'
+  classify_delaunay: True
+  HasClassification: False
+  HasRGB: True
+

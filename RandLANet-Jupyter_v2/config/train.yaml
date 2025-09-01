@@ -1,0 +1,15 @@
+train:
+  num_epochs: 1
+  batch_size: 32
+  train_steps: 16
+  val_steps: 4
+  num_points_per_step: 10000
+  num_workers: 1
+  lr: 0.01
+  gpu: 0
+  checkpoints: 'outputs/ckpts'
+  loggers: 'outputs/loggers'
+  save_freq: 5
+  scheduler_gamma: 0.95
+  load:
+

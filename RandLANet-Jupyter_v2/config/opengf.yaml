@@ -1,0 +1,7 @@
+data:
+  num_classes: 2
+  num_features: 1 # 1 - Intensity, 4 - Intensity + RGB
+  root: "E:/OpenGF" # "E:/OpenGF /media/data0/xhy/OpenGF"
+  grid_size: 1.0
+  HasIntensity: True
+  HasRGB: False
